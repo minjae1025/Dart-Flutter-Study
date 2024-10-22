@@ -63,7 +63,7 @@ int _inputNum() {
 }
 
 int _randomNum(List prize) {
-  int num = Random().nextInt(45);
+  int num = Random().nextInt(45)+1;
   for (int i = 0; i<prize.length; i++) {
     if (num == prize[i]) {
       _randomNum(prize);
