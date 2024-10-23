@@ -1,0 +1,6 @@
+알게된 점
+1. Dart에도 Java처럼 Map이 있다.
+2. Map에서 Key가 있는지 없는지 확인하려면 변수명.containsKey(키 값) 과 같이한다.
+-> 있다면 true, 없다면 false 반환
+3. 한글 입력이 깨진다면 (encoding: utf8)을 붙어야 한다.
+4. Set은 List랑 비슷하지만 중복되는 값을 넣지 못한다.
