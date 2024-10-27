@@ -1,0 +1,8 @@
+알게된 점
+1. .asMap()
+    List를 Map으로 바꿔줌. key는 기본점으로 0부터 증가하며 자동 생성
+2. .toSet()
+    List를 Set으로 바꿔줌. Set의 특징인 중복을 제거해줌
+3. final name = List.map((x) => '추가 $x');
+    이와 같이 하면 name List의 값을 참조하며 결과가 '추가 값'과 같이 됨
+    -> 예제 참고
