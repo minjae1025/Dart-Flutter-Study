@@ -1,0 +1,20 @@
+알게된 점
+1. Future라는 것을 알게되었다. 쓰는 방법은 다음과 같다.
+   Future.delayed(Duration(time(ex. seconds): n), () {
+       실행할 코드
+     });
+
+2. 위 처럼 실행하면 Future.delayed안에 있는 것만 n 만큼 나중에 실행된다.
+   자바의 Thread.sleep()과 비슷해 보이지만, dart의 Future가 더욱 효율적이다.
+   왜냐하면, 멈추는 동안 delayed 밖에 있는 코드를 실행하거나, main()을 계속 실행한다.
+
+3. 함수(메서드) 뒤에 async를 붙이고, Future.delayed앞에 await를 붙이면 다음과 같다.
+   3-1. 기존처럼 n 만큼 나중에 실행된다.
+   3-2. 그러나 await 아래의 있는 것도 같이 멈추게 된다
+   3-3. 그러면 main()으로 돌아가 계속 실행한다.
+
+4. 그럼 Thread.sleep() 과 비슷하게 하려면 다음과 한다.
+   4-1. main() 또는 그 함수를 호출하는 메서드 뒤에 async를 붙인다.
+   4-2. 함수앞에 Future<return type>을 추가한다. ex) Future<int> .... return 0;
+   4-3. 그 후 대기를 시키고 싶은 함수가 있다면 함수 호출코드 앞에 await을 붙이면 3번처럼 된다.
+ 
