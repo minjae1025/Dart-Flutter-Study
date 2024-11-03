@@ -1,0 +1,26 @@
+알게된 점
+1. import 'dart:async' 를 해야 쓸 수 있다.
+   그 후 StreamController를 쓸 수 있다.
+   ex) final controller = StreamController();
+
+2. 컨트롤러를 통해 스트림을 가져올 수 있다.
+   ex) final stream_test = controller.stream;
+
+3. 사용법은 Future과 비슷하다.
+   ex) final streamListener1 = stream_test.listen((val) {
+       print('Listener' $val');
+   });
+
+4. 마지막으로 controller에 값을 넣어줘야 한다.
+   ex) controller.sink.add(1); -> 1을 넣어줌
+
+5. 4번을 (1) 부터 (5)까지 넣으면 5번 모두 다 실행하여 반환해준다.
+
+6. 여러번 하려면 2번에서 .asBroadcastStream();를 넣어준다.
+   그 다음 3번에서 변수명과 내용을 바꾸면 따로 동작하게 된다.
+
+7. 여러번 작동하면 각각 한번 씩 돌아가면서 작동한다.
+   ex) Listener 1 : 1
+       Listener 2 : 1
+       Listener 1 : 2
+       Listener 2 : 2
